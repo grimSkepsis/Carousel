@@ -5,7 +5,20 @@
   <!-- include jquery source -->
   <script src="bower_components/jQuery/dist/jquery.min.js"></script>
   <script src="lib/jquery.cycle.lite.js"></script>
-  <script src="scripts/main.js"></script>
+
+  <!-- bootstrap stuffs -->
+  <link rel = "stylesheet" href = "bower_components\bootstrap\dist\css\bootstrap.min.css">
+  <link rel = "stylesheet" href = "bower_components\bootstrap\dist\css\bootstrap-theme.min.css">
+  <script src = "bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
+
+  <!-- angular stuffs -->
+  <script src = "bower_components\angular\angular.min.js"></script>
+
+  <!-- my stuffs -->
+  <script src="scripts\main.js"></script>
+  <script src="scripts\directives\carousel.js"></script>
+  <script src="scripts\app.js"></script>
+  <script src="scripts\controllers\controller.js"></script>
 </head>
 
 <body>
@@ -24,10 +37,10 @@
   </div>
 
   <p>Original (Angular)</p>
-  <div style ="height:700px;">
-    <img src = "http://blog.flametreepublishing.com/Portals/293166/images/cthulhu-414web.jpg">
-    <img src = "http://fc00.deviantart.net/fs70/i/2011/142/8/f/dagon_by_velvetcat-d3gxr0w.jpg">
-    <img src = "http://fc04.deviantart.net/fs70/i/2013/319/b/2/yog_sothoth_rising_by_butttornado-d6ubvy6.jpg">
+  <div ng-app ="CarouselApp" ng-controller = "CarouselController" >
+    <carousel data = "imgUrlArray">
+
+    </carousel>
   </div>
 </body>
 </html>

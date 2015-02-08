@@ -112,12 +112,11 @@ function JQueryCarousel(id){
 
 
 $(document).ready(function() {
-  console.log("blagathath!");
+  //console.log("blagathath!");
   $('#plugin').cycle();
   //initCarousel("#original-jquery");
   //cycleCarousel("#original-jquery");
   var jQCarousel = new JQueryCarousel("#original-jquery");
   jQCarousel.cycleBackwards();
-  var myVar2 = setInterval(function() {console.log(jQCarousel.currentItem)}
-  , 5000);
+
 });
