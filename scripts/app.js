@@ -1,3 +1,4 @@
 var app = angular.module('CarouselApp', [
-          'app.directives.carousel'
+          'app.directives.carousel',
+          'ngAnimate'
           ]);

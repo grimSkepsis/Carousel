@@ -18,16 +18,16 @@ angular.module('app.directives.carousel', [])
 
         for(var i = 0; i < $scope.data.length; i++){
           if(i == 0){
-            cArray.push({url: $scope.data[i], displayed: true});
+            cArray.push({url: $scope.data[i], class: "displayed-item"});
           }
           else{
-            cArray.push({url: $scope.data[i], displayed: false});
+            cArray.push({url: $scope.data[i], class: "hidden-item"});
           }
         }
 
         $scope.advanceForward = function(){
-          cArray[positionTracker.next].displayed = true;
-          cArray[positionTracker.cur].displayed = false;
+          cArray[positionTracker.next].class = "displayed-item";
+          cArray[positionTracker.cur].class = "hidden-item";
 
           positionTracker.prev = positionTracker.cur;
           positionTracker.cur = positionTracker.next;
@@ -38,9 +38,10 @@ angular.module('app.directives.carousel', [])
           }
         };
 
+
         $scope.advanceBackward = function(){
-          cArray[positionTracker.prev].displayed = true;
-          cArray[positionTracker.cur].displayed = false;
+          cArray[positionTracker.prev].class = "displayed-item";
+          cArray[positionTracker.cur].class = "hidden-item";
 
           positionTracker.next = positionTracker.cur;
           positionTracker.cur = positionTracker.prev;
